@@ -34,7 +34,7 @@ public class Calcing {
         int r = 0;
         int e = 0;
 
-        if (first.contains("I") || first.contains("V") || first.contains("X")) { // проверяю является ли римской цифрой
+        if (first.contains("I") || first.contains("V") || first.contains("X")) {
             r += 1;
         } else {e += 1;}
         if (second.contains("I") || second.contains("V") || second.contains("X")) {
@@ -44,12 +44,11 @@ public class Calcing {
         if(r<2 && e<2){throw new ArithmeticException("Числа указаны в разных системах исчисления");}
 
         if (r == 2) {
-          //  System.out.println("Обе цифры римские");
-            result = ArabicToRoman(Raschet(romanToArabic(first), romanToArabic(second), z)); // преобразую в арабские и получаю арабский результат и вызываю метод конвертации в римские
+          result = ArabicToRoman(Raschet(romanToArabic(first), romanToArabic(second), z));
         }
 
         if (e == 2) {
-           // System.out.println("Обе цифры арабские");
+          
             int a = Integer.parseInt(first);
             int b = Integer.parseInt(second);
                if (a<1 || a>10 || b<1 || b>10){
